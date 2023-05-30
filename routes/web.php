@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Jobs\Coste;
+use App\Http\Livewire\OrdersLinesComponent;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +14,11 @@ use App\Jobs\Coste;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     Coste::dispatch();
     return view('welcome');
-});
+});*/
+
+Route::get('/', OrdersLinesComponent::class);
+
+
